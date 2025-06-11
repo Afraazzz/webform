@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <form class="contact-form" action="" method="POST" onsubmit="return validate()">
+    <h2>WEB FORM</h2>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input style="background-color:lightpink;" type="text" name="name" placeholder="Enter your name" id="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input style="background-color:lightpink;" type="email" name="email" placeholder="Enter your email" id="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input style="background-color: lightpink;" type="password" name="password" placeholder="Enter your password" id="password">
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea style="background-color: lightpink;" name="message" placeholder="Enter your message" id="message" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+
+<script>
+  function validate() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !password || !message) {
+      alert("Please fill in all fieldsuuuu.");
+      return false;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    // If everything is fine, allow submission
+    return true;
+  }
+
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email.toLowerCase());
+  }
+</script>
+
+</body>
+</html>
