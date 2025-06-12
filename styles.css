@@ -11,7 +11,7 @@ body {
 }
 
 .contact-form {
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.562);
   padding: 40px;
   width: 100%;
   max-width: 500px;
@@ -44,7 +44,7 @@ body {
   width: 100%;
   padding: 10px 0;
   border: none;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #73ebeb;
   font-size: 16px;
   color: #333;
   outline: none;
@@ -61,7 +61,7 @@ body {
   display: block;
   width: 100%;
   padding: 12px;
-  background: linear-gradient(to right, #f2709c, #ff9472);
+  background: linear-gradient(to right, #62f00f, #ff9472);
   border: none;
   color: rgb(27, 13, 13);
   font-size: 16px;
